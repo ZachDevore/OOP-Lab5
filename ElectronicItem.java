@@ -1,3 +1,8 @@
+/**
+ * @author Zachary Devore
+ * Date: 3/9/26
+ * Section: CSC 311-002
+ */
 public class ElectronicItem extends StoreItem {
     
     /** Brandname of the Item */

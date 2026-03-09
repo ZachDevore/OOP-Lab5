@@ -1,5 +1,4 @@
 /**
- * Class purpose: determine if an item is Shelf Stable
  * @author Zachary Devore
  * Date: 3/9/26
  * Section: CSC 311-002
