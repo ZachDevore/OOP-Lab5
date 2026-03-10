@@ -14,7 +14,7 @@ public class ElectronicItem extends StoreItem {
     /** the power usage of the device in Watts */
     private double powerWatts;
 
-    /** Weather or not the item is rechargable */
+    /** Wheather or not the item is rechargable */
     private boolean isRechargeable;
 
     /**
@@ -57,8 +57,8 @@ public class ElectronicItem extends StoreItem {
     public double getPowerWatts() {return this.powerWatts;}
 
     /**
-     * Getter for weather the item is rechargable or not
-     * @return weather the item is rechargable
+     * Getter for wheather the item is rechargable or not
+     * @return wheather the item is rechargable
      */
     public boolean getIsRechargable() {return this.isRechargeable;}
 
