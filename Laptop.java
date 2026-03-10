@@ -1,3 +1,8 @@
+/**
+ * @author Zachary Devore
+ * Date: 3/10/26
+ * Section: CSC 311-002
+ */
 public class Laptop extends ElectronicItem {
 
     /** Screensize of the laptop */
