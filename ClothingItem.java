@@ -31,7 +31,9 @@ public class ClothingItem extends StoreItem{
 
     //getters and setters
 
-
+    /**
+     * getters and setters for the items brand, size and color
+     */
     public String getBrand() {return brand;}
 
     public String getSize() {return size;}
