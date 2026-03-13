@@ -56,5 +56,22 @@ public class Laptop extends ElectronicItem {
      * @param ram
      */
     public void setRAM(int ram) {this.ram = ram;}
+
+     /**
+     * Represents a Laptop with the attributes ItemID, Price, Quantity, Brand, Warrenty Months,
+     * Power Watts, isRechargable, Screen Size, Ram.
+     */
+    @Override
+    public String toString() {
+        return "ItemId: " + this.getItemID() + 
+                "\nPrice: " + this.getPrice() + 
+                "\nQuantity: " + this.getQuantity() +
+                "\nBrand: " + this.getBrand() + 
+                "\nWarrenty Months: " + this.getWarrentyMonths() + 
+                "\nPower Watts: " + this.getPowerWatts() + 
+                "\nisRechargable: " + this.getIsRechargable() + 
+                "\nScreen Size: " + this.getScreenSize() + 
+                "\nRam: " + this.getRam();
+    }
     
 }
