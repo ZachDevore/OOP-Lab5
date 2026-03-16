@@ -10,6 +10,8 @@ public class TV extends ElectronicItem {
 
     /** Weather or not the TV is compatable with a vesa mount */
     private boolean isVesaCombatiable;
+    
+    //Two spellings of compatible in this class
 
     /**
      * Constructor for a Samsung TV
