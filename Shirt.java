@@ -19,7 +19,7 @@ public class Shirt extends ClothingItem{
      * @param size
      */
 
-    public Shirt(int itemId, double price, int quantity,String brand, int size, String color){
+    public Shirt(int itemID, double price, int quantity,String brand, int size, String color, String sleeve_type, String material){
 
         super(itemId, price, quantity, brand, size, color);
 
@@ -34,6 +34,18 @@ public class Shirt extends ClothingItem{
     public void setMaterial(String material) {this.material = material;}
 
     public void setSleeve_type(String sleeve_type) {this.sleeve_type = sleeve_type;}
+
+    @override
+    public String toString(){
+        return "ItemId" + this.getItemID() +
+                "\nPrice" + this.getPrice() +
+                "\nQuantity" + this.getQuantity() +
+                "\nBrand" + this.getBrand() +
+                "\nColor" + this.getColor() +
+                "\nSize" + this.getSize() +
+                "\nSleeve Type" + this.getSleeve_type() +
+                "\n Material" + this.getMaterial()
+    }
 
 
 }

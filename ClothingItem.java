@@ -29,17 +29,30 @@ public class ClothingItem extends StoreItem{
         this.color = color;
     }
 
-    //getters and setters
 
     /**
-     * getters and setters for the items brand, size and color
+     * Getter for brand type of the clotihng
+     * @return  brand
      */
     public String getBrand() {return brand;}
 
+    /**
+     * getter the size of the clothing item
+     * @return size
+     */
     public String getSize() {return size;}
 
+    /**
+     * Getter the color of the
+     * @return color
+     */
     public String getColor() {return color;}
 
+
+    /**
+     * Setter for the brand
+     * @param  brand
+     */
     public void setBrand(String brand) {this.brand = brand;}
 
     public void setSize(String size) {this.size = size;}
