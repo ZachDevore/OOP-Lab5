@@ -23,7 +23,10 @@ public class ClothingItem extends StoreItem{
      * @param size
      * @param color
      */
-    public ClothingItem(String brand, String size, String color){
+    public ClothingItem(int itemID, double price, int quantity, String brand, String size, String color){
+
+        super(itemID, price, quantity);
+
         this.brand = brand;
         this.size = size;
         this.color = color;
