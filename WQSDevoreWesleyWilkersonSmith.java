@@ -1,21 +1,23 @@
 import java.util.Scanner;
 public class WQSDevoreWesleyWilkersonSmith {
     
-    /** Array of the Store Inventory */
+    /** Array of the Electric Item Inventory */
     private  StoreItem[] electricItemInventory;
 
+    /** Array of Clothing Item Inventory */
     private  StoreItem[] clothingItemInventory;
 
+    /** Array of Food Item Inventory */
     private  StoreItem[] foodItemInventory;
 
+    /** Keeps track of the number of items in electricItemInventory */
     private int electricInventoryCount;
 
+    /** Keeps track of the number of items in clothingItemInventory */
     private int clothingItemInventoryCount;
 
+    /** Keeps track of the number of items in foodItemInventory */
     private int foodItemInventoryCount;
-
-
-
 
     /** Constructor for the Store */
     public WQSDevoreWesleyWilkersonSmith() {
@@ -28,29 +30,38 @@ public class WQSDevoreWesleyWilkersonSmith {
         this.foodItemInventoryCount = 0;
     }
 
-    // Getters
+    /** @return the array of electric items in inventory */
     public StoreItem[] getElectricItemInventory() {return this.electricItemInventory;}
+
+    /** @return the array of clothing items in inventory */
     public StoreItem[] getClothingItemInventory() {return this.clothingItemInventory;}
+
+    /** @return the array of food items in inventory */
     public StoreItem[] getFoodItemInventory() {return this.foodItemInventory;}
 
     public int getElectricItemInventoryCount() {return this.electricInventoryCount;}
     public int getClothingItemInventoryCount() {return this.clothingItemInventoryCount;}
     public int getFoodItemInventoryCount() {return this.foodItemInventoryCount;} 
 
-    // Methods to increment count
+    /** increments the count to reflect the number of electric items in the inventory */
     public void incrementElectricInventoryItemCount() {
         this.electricInventoryCount++;
     }
 
+    /** increments the count to reflect the number of clothing items in the inventory */
     public void incrementClothingItemInventory() {
         this.clothingItemInventoryCount++;
     }
 
+    /** increments the count to reflect the number of food items in the inventory */
     public void incrementFoodItemInventoryCount() {
         this.foodItemInventoryCount++;
     }
 
-    // AddInventory
+    /**
+     * Adds a item to the store inventory
+     * @param scanner
+     */
     public void addInventory(Scanner scanner) {
          System.out.println("Which kind of item would you like to add?\n Press 1 for Clothing Item\n Press 2 for Electronic Item\n Press 3 for Cleaning Item\n Press 0 to stop adding items");
         int typeOfItem = scanner.nextInt();
