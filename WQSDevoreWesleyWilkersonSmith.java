@@ -2,20 +2,56 @@ import java.util.Scanner;
 public class WQSDevoreWesleyWilkersonSmith {
     
     /** Array of the Store Inventory */
-    private StoreItem[] storeInventory;
+    private final StoreItem[] electricItemInventory;
 
-    private int inventoryCount;
+    private final StoreItem[] clothingItemInventory;
+
+    private final StoreItem[] foodItemInventory;
+
+    private int electricInventoryCount;
+
+    private int clothingItemInventoryCount;
+
+    private int foodItemInventoryCount;
+
+
 
 
     /** Constructor for the Store */
     public WQSDevoreWesleyWilkersonSmith() {
-        this.storeInventory = new StoreItem[1000]; // Initialize with a capacity of 1000 items
-        this.inventoryCount = 0;
+        this.electricItemInventory = new StoreItem[1000]; // Initialize with a capacity of 1000 items
+        this.clothingItemInventory = new StoreItem[1000];
+        this.foodItemInventory = new StoreItem[1000];
+        
+        this.electricInventoryCount = 0;
+        this.clothingItemInventoryCount = 0;
+        this.foodItemInventoryCount = 0;
     }
 
-    public StoreItem[] getStoreInventory() {return this.storeInventory;}
+    // Getters
+    public StoreItem[] getElectricItemInventory() {return this.electricItemInventory;}
+    public StoreItem[] getClothingItemInventory() {return this.clothingItemInventory;}
+    public StoreItem[] getFoodItemInventory() {return this.foodItemInventory;}
 
-    public int getInventoryCount() {return this.inventoryCount;}
+    public int getElectricItemInventoryCount() {return this.electricInventoryCount;}
+    public int getClothingItemInventoryCount() {return this.clothingItemInventoryCount;}
+    public int getFoodItemInventoryCount() {return this.foodItemInventoryCount;} 
+
+    // Methods to increment count
+    public void incrementElectricInventoryItemCount() {
+        this.electricInventoryCount++;
+    }
+
+    public void incrementClothingItemInventory() {
+        this.clothingItemInventoryCount++;
+    }
+
+    public void incrementFoodItemInventoryCount() {
+        this.foodItemInventoryCount++;
+    }
+
+
+
 
    
 
@@ -71,9 +107,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                             String closureType = scanner.next();
 
                             // Reads as store[inventoryCount] = new Shoe()
-                            store.getStoreInventory()[store.getInventoryCount()] = new Shoe(itemID, brand, color, price, quantity, size, category, isSlipResistant, closureType);
+                            store.getClothingItemInventory()[store.getClothingItemInventoryCount()] = new Shoe(itemID, brand, color, price, quantity, size, category, isSlipResistant, closureType);
 
-                            store.inventoryCount++; // Incriment count
+                            store.incrementClothingItemInventory(); // Increment count
                             continue; // exit
 
                         } else { // Add Shirt
@@ -102,9 +138,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                             String material = scanner.next();
 
                             // Add the Shirt reads as store[inventoryCount] = new Shirt()
-                            store.getStoreInventory()[store.getInventoryCount()] = new Shirt(itemID, price, quantity, brand, size, color, sleeveType, material);
+                            store.getClothingItemInventory()[store.getClothingItemInventoryCount()] = new Shirt(itemID, price, quantity, brand, size, color, sleeveType, material);
 
-                            store.inventoryCount++;
+                            store.incrementClothingItemInventory();
                             continue; // exit 
                             
                         }
@@ -118,6 +154,10 @@ public class WQSDevoreWesleyWilkersonSmith {
                         //Exit
                         break;
                    }
+
+
+
+                   
                 case 2:
                     //Sell Inventory
                 case 0:
