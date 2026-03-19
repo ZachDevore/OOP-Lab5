@@ -125,6 +125,8 @@ public class WQSDevoreWesleyWilkersonSmith {
                     break;
             }
         } while (!flag); // until the flag is triggered the program will keep prompting the user
+
+        scanner.close(); // Close the scanner
     }
 
     
