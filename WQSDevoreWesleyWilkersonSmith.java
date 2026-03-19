@@ -287,7 +287,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                             System.out.println("(String) What is the shape of the fruit?");
                             String shape = scanner.next();
 
-                           // store.getFoodItemInventory()[store.getFoodItemInventoryCount()] = new Fruit(itemID, price, quantity, calories, expirationDate, hasSeeds, color, hasPeel, isSweet, shape); // Need to fix constructor parameter order
+                            store.getFoodItemInventory()[store.getFoodItemInventoryCount()] = new Fruit(itemID, price, quantity, calories, calories, color, hasSeeds, hasPeel, isSweet, shape);
                             store.incrementFoodItemInventoryCount();
                         
                         continue;
