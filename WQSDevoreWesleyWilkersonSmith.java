@@ -62,7 +62,7 @@ public class WQSDevoreWesleyWilkersonSmith {
     public void incrementFoodItemInventoryCount() {
         this.foodItemInventoryCount++;
     }
-
+//
     /**
      * Prints out the items in the inventory
      * @param items
