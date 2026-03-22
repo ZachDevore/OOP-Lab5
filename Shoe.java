@@ -43,9 +43,9 @@ public class Shoe extends ClothingItem{
 
     public String getClosure_Type(){return closure_type;}
 
-    public void setCategory(){this.category = category;}
+    public void setCategory(String category){this.category = category;}
 
-    public void setIsSlip_Resistant(){this.isSlip_resistant = isSlip_resistant;}
+    public void setIsSlip_Resistant(boolean isSlip_resistant){this.isSlip_resistant = isSlip_resistant;}
 
     public void setClosure_type(String closure_type) {this.closure_type = closure_type;}
 

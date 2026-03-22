@@ -216,7 +216,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                                 System.out.println("(boolean) Is the TV Smart?");
                                 boolean isSmart = scanner.nextBoolean();
 
-                                System.out.println("(boolean) Is the TV VESA compatable?");
+                                System.out.println("(boolean) Is the TV VESA compataile?");
                                 boolean isVesaCombatiable = scanner.nextBoolean();
 
                                 getElectricItemInventory()[getElectricItemInventoryCount()] = new TV(itemID, name, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, isSmart, isVesaCombatiable); // Adds TV
