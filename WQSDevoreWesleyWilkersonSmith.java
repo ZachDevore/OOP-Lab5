@@ -62,7 +62,24 @@ public class WQSDevoreWesleyWilkersonSmith {
     public void incrementFoodItemInventoryCount() {
         this.foodItemInventoryCount++;
     }
-//
+
+    /**
+     * Matches the name of an item to the items in inventory
+     * @param items Inventory array
+     * @param itemCount Number of items in inventory
+     * @param name The name of the item to be matched
+     * @return The matches item
+     */
+    public StoreItem getStoreItem(StoreItem[] items, int itemCount, String name) {
+        for (int i = 0; i < itemCount; i++) {
+            if (items[i].getName().equals(name)) {
+                return items[i];
+            }
+        }
+        return null; // If no items match return null
+    }
+
+
     /**
      * Prints out the items in the inventory
      * @param items the array of items
