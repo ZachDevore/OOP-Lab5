@@ -65,16 +65,26 @@ public class WQSDevoreWesleyWilkersonSmith {
 //
     /**
      * Prints out the items in the inventory
-     * @param items
+     * @param items the array of items
+     * @param itemCount the number of items in the inventory
      */
     public void displayItems(StoreItem[] items, int itemCount) {
-        if (itemCount == 0) {
-            System.out.println("There are no items in the inventory yet");
-            return;
-        } else {
+            // Hard coding a few instances in the main method so no need to check if the array is empty
             for (int i = 0; i < itemCount; i++) {
                 System.out.println(items[i] + "\n");
             }
+        }
+    
+    /**
+     * Calculates the sales tax on an item
+     * @param item
+     * @return the sales tax of the item
+     */
+    public double calculateSalexTax(StoreItem item) {
+        if (item instanceof FoodItem) {
+            return item.getPrice() * .03; // 3% sales tax for food
+        } else {
+            return item.getPrice() * .07; // 7% sales tax for all other items
         }
     }
 
@@ -95,6 +105,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                         if (typeOfClothingItem == 1) { // Add Shoe
                             System.out.print("(int) Enter ItemID: ");
                             int itemID = scanner.nextInt();
+
+                            System.out.println("(String) Enter the Name: ");
+                            String name = scanner.next();
 
                             System.out.print("(String) Enter the Brand: ");
                             String brand = scanner.next();
@@ -120,7 +133,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                             System.out.print("(String) Enter the Closure type: ");
                             String closureType = scanner.next();
 
-                            getClothingItemInventory()[getClothingItemInventoryCount()] = new Shoe(itemID, brand, color, price, quantity, size, category, isSlipResistant, closureType); // Add Shoe
+                            getClothingItemInventory()[getClothingItemInventoryCount()] = new Shoe(itemID, name, brand, color, price, quantity, size, category, isSlipResistant, closureType); // Add Shoe
 
                             incrementClothingItemInventory(); // Increment count for number of clothingItems in inventory
                             return; // exit
@@ -128,6 +141,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                         } else { // Add Shirt
                             System.out.print("(int) Enter ItemID: ");
                             int itemID = scanner.nextInt();
+
+                            System.out.println("(String) Enter the Name: ");
+                            String name = scanner.next();
 
                             System.out.print("(String) Enter the Brand: ");
                             String brand = scanner.next();
@@ -150,7 +166,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                             System.out.print("(String) Enter the type of material: ");
                             String material = scanner.next();
 
-                            getClothingItemInventory()[getClothingItemInventoryCount()] = new Shirt(itemID, price, quantity, brand, size, color, sleeveType, material); // Adds Shirt
+                            getClothingItemInventory()[getClothingItemInventoryCount()] = new Shirt(itemID, name, price, quantity, brand, size, color, sleeveType, material); // Adds Shirt
                            
                             incrementClothingItemInventory(); // increment count for number of clothing items in inventory
                             return; // exit 
@@ -166,6 +182,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                                 // Add TV
                                 System.out.println("(int) Enter the ItemID: ");
                                 int itemID = scanner.nextInt();
+
+                                System.out.println("(String) Enter the Name: ");
+                                String name = scanner.next();
 
                                 System.out.println("(double) Enter the price $");
                                 double price = scanner.nextDouble();
@@ -191,13 +210,16 @@ public class WQSDevoreWesleyWilkersonSmith {
                                 System.out.println("(boolean) Is the TV VESA compatable?");
                                 boolean isVesaCombatiable = scanner.nextBoolean();
 
-                                getElectricItemInventory()[getElectricItemInventoryCount()] = new TV(itemID, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, isSmart, isVesaCombatiable); // Adds TV
+                                getElectricItemInventory()[getElectricItemInventoryCount()] = new TV(itemID, name, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, isSmart, isVesaCombatiable); // Adds TV
                                 incrementElectricInventoryItemCount(); // Increments the count for number of electric items in the inventory
                                 return; // Exit
                             }
                             case 2: { // Add Phone
                                 System.out.println("(int) Enter the ItemID: ");
                                 int itemID = scanner.nextInt();
+
+                                System.out.println("(String) Enter the Name: ");
+                                String name = scanner.next();
 
                                 System.out.println("(double) Enter the price $");
                                 double price = scanner.nextDouble();
@@ -223,7 +245,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                                 System.out.println("(String) Enter the type of chargerPort");
                                 String chargerPort = scanner.next();
 
-                                getElectricItemInventory()[getElectricItemInventoryCount()] = new Phone(itemID, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, os, chargerPort); // Adds Phone to the inventory
+                                getElectricItemInventory()[getElectricItemInventoryCount()] = new Phone(itemID, name, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, os, chargerPort); // Adds Phone to the inventory
 
                                 incrementElectricInventoryItemCount(); // Increments the count for number of electric items in the inventory
                                 return;
@@ -231,6 +253,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                             case 3: { // Add Laptop
                                 System.out.println("(int) Enter the ItemID: ");
                                 int itemID = scanner.nextInt();
+
+                                System.out.println("(String) Enter the Name: ");
+                                String name = scanner.next();
 
                                 System.out.println("(double) Enter the price $");
                                 double price = scanner.nextDouble();
@@ -256,7 +281,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                                 System.out.println("(int) Enter the amount of RAM in the Laptop: ");
                                 int ram = scanner.nextInt();
 
-                                getElectricItemInventory()[getElectricItemInventoryCount()] = new Laptop(itemID, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, screenSize, ram); // Adds Laptop to the inventory
+                                getElectricItemInventory()[getElectricItemInventoryCount()] = new Laptop(itemID, name, price, quantity, brand, warrentyMonths, powerWatts, isRechargable, screenSize, ram); // Adds Laptop to the inventory
 
                                 incrementElectricInventoryItemCount(); // Increments the count for number of electric items in the store
                                 return;
@@ -272,6 +297,9 @@ public class WQSDevoreWesleyWilkersonSmith {
                         if (fruitToAdd == 1) { // Add Fruit
                             System.out.println("(int) Enter the ItemID: ");
                             int itemID = scanner.nextInt();
+
+                            System.out.println("(String) Enter the Name: ");
+                            String name = scanner.next();
 
                             System.out.println("(double) Enter the price $");
                             double price = scanner.nextDouble();
@@ -300,13 +328,16 @@ public class WQSDevoreWesleyWilkersonSmith {
                             System.out.println("(String) What is the shape of the fruit?");
                             String shape = scanner.next();
 
-                            getFoodItemInventory()[getFoodItemInventoryCount()] = new Fruit(itemID, price, quantity, calories, expirationDate, color, hasSeeds, hasPeel, isSweet, shape); // Adds fruit to the store inventory
+                            getFoodItemInventory()[getFoodItemInventoryCount()] = new Fruit(itemID, name, price, quantity, calories, expirationDate, color, hasSeeds, hasPeel, isSweet, shape); // Adds fruit to the store inventory
 
                             incrementFoodItemInventoryCount(); // Increments the count for number of food items in the store inventory
                         
                         } else { // Add Vegetable
                             System.out.println("(int) Enter the ItemID: ");
                             int itemID = scanner.nextInt();
+
+                            System.out.println("(String) Enter the Name: ");
+                            String name = scanner.next();
 
                             System.out.println("(double) Enter the price $");
                             double price = scanner.nextDouble();
@@ -338,7 +369,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                             System.out.println("(boolean) Is the Vegetable a stem?");
                             boolean isStem = scanner.nextBoolean();
 
-                            getFoodItemInventory()[getFoodItemInventoryCount()] = new Vegetable(itemID, price, quantity, calories, expirationDate, color, hasSeeds, isRoot, isFlower, isLeaf, isStem); // Adds Vegetable to the store inventory
+                            getFoodItemInventory()[getFoodItemInventoryCount()] = new Vegetable(itemID, name, price, quantity, calories, expirationDate, color, hasSeeds, isRoot, isFlower, isLeaf, isStem); // Adds Vegetable to the store inventory
 
                             incrementFoodItemInventoryCount(); // Increments the count for the number of food items in the inventory
                         }
