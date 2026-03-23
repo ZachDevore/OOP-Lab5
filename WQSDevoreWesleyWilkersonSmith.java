@@ -72,7 +72,7 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public StoreItem getStoreItem(StoreItem[] items, int itemCount, String name) {
         for (int i = 0; i < itemCount; i++) {
-            if (items[i].getName().equals(name)) { // If item passed equals named pass it's a match
+            if (items[i].getName().equals(name)) { // If item passed equals name pass it's a match
                 return items[i];
             }
         }
