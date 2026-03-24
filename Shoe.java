@@ -51,14 +51,17 @@ public class Shoe extends ClothingItem{
 
     @Override
     public String toString(){
-        return "Item Id" + this.getItemID() +
-                "\nPrice" + this.getPrice() +
-                "\nQuantity" + this.getQuantity() +
-                "\nBrand" + this.getBrand() +
-                "\nColor" + this.getColor() +
-                "\nSize" + this.getSize() +
-                "\nCategory" + this.getCategory() +
-                "\nSlip Resistant" + this.getIsSlip_Resistant() +
-                "\n Closure Type" + this.getClosure_Type();
+        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: %.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tSize: %s\t|\tColor: %s\t|\tIs Slip Resistant? %b\t|\tCategory: %s\t|\tClosure Type: %s",
+                            getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getSize(), getColor(), getIsSlip_Resistant(), getCategory(), getClosure_Type());
+
+        // return "Item Id" + this.getItemID() +
+        //         "\nPrice" + this.getPrice() +
+        //         "\nQuantity" + this.getQuantity() +
+        //         "\nBrand" + this.getBrand() +
+        //         "\nColor" + this.getColor() +
+        //         "\nSize" + this.getSize() +
+        //         "\nCategory" + this.getCategory() +
+        //         "\nSlip Resistant" + this.getIsSlip_Resistant() +
+        //         "\n Closure Type" + this.getClosure_Type();
     }
 }

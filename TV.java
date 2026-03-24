@@ -48,15 +48,17 @@ public class TV extends ElectronicItem {
      */
     @Override
     public String toString() {
-        return "ItemId: " + this.getItemID() + 
-                "\nPrice: " + this.getPrice() + 
-                "\nQuantity: " + this.getQuantity() +
-                "\nBrand: " + this.getBrand() + 
-                "\nWarrenty Months: " + this.getWarrentyMonths() + 
-                "\nPower Watts: " + this.getPowerWatts() + 
-                "\nisRechargable: " + this.getIsRechargable() + 
-                "\nIsSmart: " + this.getIsSmart() + 
-                "\nVesa Compatible: " + this.getIsVesaCompatible();
+         return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: $%.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tWarrenty Months: %d\t|\tPower Consumption in Watts: %.2f\t|\tIs Rechargeable? %b\t|\tIs a Smart TV? %b\t|\tIs VESA Compatable? %b", 
+                            getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getWarrantyMonths(), getPowerWatts(), getIsRechargable(), getIsSmart(), getIsVesaCompatible());
+        // return "ItemId: " + this.getItemID() + 
+        //         "\nPrice: " + this.getPrice() + 
+        //         "\nQuantity: " + this.getQuantity() +
+        //         "\nBrand: " + this.getBrand() + 
+        //         "\nWarrenty Months: " + this.getWarrentyMonths() + 
+        //         "\nPower Watts: " + this.getPowerWatts() + 
+        //         "\nisRechargable: " + this.getIsRechargable() + 
+        //         "\nIsSmart: " + this.getIsSmart() + 
+        //         "\nVesa Compatible: " + this.getIsVesaCompatible();
     }
 
 }

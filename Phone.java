@@ -54,15 +54,17 @@ public class Phone extends ElectronicItem {
      */
     @Override
     public String toString() {
-        return "ItemId: " + this.getItemID() + 
-                "\nPrice: " + this.getPrice() + 
-                "\nQuantity: " + this.getQuantity() +
-                "\nBrand: " + this.getBrand() + 
-                "\nWarrenty Months: " + this.getWarrentyMonths() + 
-                "\nPower Watts: " + this.getPowerWatts() + 
-                "\nisRechargable: " + this.getIsRechargable() + 
-                "\nOperating System: " + this.getOs() + 
-                "\nCharger Port: " + this.getChargerPort();
+         return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: $%.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tWarrenty Months: %d\t|\tPower Consumption in Watts: %.2f\t|\tIs Rechargeable? %b\t|\tOperating System: %s\t|\tCharger Port: %s", 
+                            getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getWarrantyMonths(), getPowerWatts(), getIsRechargable(), getOs(), getChargerPort());
+        // return "ItemId: " + this.getItemID() + 
+        //         "\nPrice: " + this.getPrice() + 
+        //         "\nQuantity: " + this.getQuantity() +
+        //         "\nBrand: " + this.getBrand() + 
+        //         "\nWarrenty Months: " + this.getWarrentyMonths() + 
+        //         "\nPower Watts: " + this.getPowerWatts() + 
+        //         "\nisRechargable: " + this.getIsRechargable() + 
+        //         "\nOperating System: " + this.getOs() + 
+        //         "\nCharger Port: " + this.getChargerPort();
     }
 
 

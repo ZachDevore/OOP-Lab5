@@ -29,7 +29,7 @@ public class Fruit extends FoodItem {
      * @param shape
      */
     public Fruit(int itemID, String name, double price, int quantity, int calories,
-                 int expirationDate, String color, boolean hasSeeds, boolean hasPeel,
+                 double expirationDate, String color, boolean hasSeeds, boolean hasPeel,
                  boolean isSweet, String shape){
 
         //call constructor of food item
@@ -98,16 +98,18 @@ public class Fruit extends FoodItem {
 
     @Override
     public String toString() {
-        return "ItemId: " + this.getItemID() +
-                "\nPrice: " + this.getPrice() +
-                "\nQuantity: " + this.getQuantity() +
-                "\nCalories: " + this.getCalories() +
-                "\nExpiration Date: " + this.getExpirationDate() +
-                "\nColor: " + this.getColor() +
-                "\nHas Seeds: " + this.getHasSeeds() +
-                "\nHas Peel: " + this.getHasPeel() +
-                "\nIs Sweet: " + this.getIsSweet() +
-                "\nShape: " + this.getShape();
+        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: %.2f\t|\tQuantity: %d\t|\tCalories: %d\t|\tExpiration Date: %f\t|\tColor: %s\t|\tHas Seeds? %b\t|\tHas Peel? %b\t|\tIs Sweet?  %b\t|\tShape: %s", 
+                            getItemID(), getName(), getPrice(), getQuantity(), getCalories(), getExpirationDate(), getColor(), getHasSeeds(), getHasPeel(), getIsSweet(), getShape());
+        // return "ItemId: " + this.getItemID() +
+        //         "\nPrice: " + this.getPrice() +
+        //         "\nQuantity: " + this.getQuantity() +
+        //         "\nCalories: " + this.getCalories() +
+        //         "\nExpiration Date: " + this.getExpirationDate() +
+        //         "\nColor: " + this.getColor() +
+        //         "\nHas Seeds: " + this.getHasSeeds() +
+        //         "\nHas Peel: " + this.getHasPeel() +
+        //         "\nIs Sweet: " + this.getIsSweet() +
+        //         "\nShape: " + this.getShape();
     }
 
 }

@@ -107,15 +107,8 @@ public class WQSDevoreWesleyWilkersonSmith {
             System.out.println("----------------------------------------");
             
             for (int i = 0; i < itemCount; i++) {
-
-                if (items[i] instanceof Shoe) { 
-                Shoe shoe = (Shoe) items[i]; // Down casting because all of these aren't defined in StoreItem
-                System.out.printf("ItemID: %d  |  Price: $%.2f   |  Quantity: %d  |  Brand: %s |  Color: %s |  Size: %s  |  Category: %s  |  Slip Resistant: %b | Closure Type: %b", 
-                                shoe.getItemID(), shoe.getPrice(), shoe.getQuantity(), shoe.getBrand(), shoe.getColor(), shoe.getSize(), shoe.getCategory(), shoe.getIsSlip_Resistant(), shoe.getClosure_Type());
-            } else if (items[i] instanceof Shirt) {
-                Shirt shit = (Shirt) items[i]; // Down casting
-
-            }
+                System.out.println(items[i]);
+                System.out.println();
             }
         }
     
@@ -126,7 +119,7 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public double calculateSalexTax(StoreItem item) {
         if (item instanceof FoodItem) {
-            return item.getPrice() + .03; // 3% sales tax for food
+            return item.getPrice() * .03; // 3% sales tax for food
         } else {
             return item.getPrice() * .07; // 7% sales tax for all other items
         }
@@ -447,7 +440,7 @@ public class WQSDevoreWesleyWilkersonSmith {
         store.addInventoryHardCoded(); // Add hardcoded items to the respective inventory
         Scanner scanner = new Scanner(System.in); // Initialize scanner object to read from the Standard Input
 
-        store.displayItems(store.getElectricItemInventory(), store.getClothingItemInventoryCount());
+        store.displayItems(store.getFoodItemInventory(), store.getFoodItemInventoryCount());
 
         // boolean flag = false; // flag is to exit the loop when the user prompts 0
         
