@@ -108,9 +108,13 @@ public class WQSDevoreWesleyWilkersonSmith {
             
             for (int i = 0; i < itemCount; i++) {
 
-                if (items[i] instanceof Shoe) { // The different categories are in their own arrays so just need to check the first instance
-                // System.out.printf("ItemID: %d  |  Price: $%.2f   |  Quantity: %d  |  Brand: %d |  Color: %s |  Size: %s  |  Category: %s  |  Slip Resistant: %b | Closure Type: %b", 
-                //                 items[i].getItemID(), items[i].getPrice(), items[i].getQuantity(), items[i].getBrand(), items[i].getColor(), items[i].getSize(), items[i].getCategory(), items[i].getIsSlip_Resistant());
+                if (items[i] instanceof Shoe) { 
+                Shoe shoe = (Shoe) items[i]; // Down casting because all of these aren't defined in StoreItem
+                System.out.printf("ItemID: %d  |  Price: $%.2f   |  Quantity: %d  |  Brand: %s |  Color: %s |  Size: %s  |  Category: %s  |  Slip Resistant: %b | Closure Type: %b", 
+                                shoe.getItemID(), shoe.getPrice(), shoe.getQuantity(), shoe.getBrand(), shoe.getColor(), shoe.getSize(), shoe.getCategory(), shoe.getIsSlip_Resistant(), shoe.getClosure_Type());
+            } else if (items[i] instanceof Shirt) {
+                Shirt shit = (Shirt) items[i]; // Down casting
+
             }
             }
         }
