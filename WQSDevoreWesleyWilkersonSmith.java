@@ -131,6 +131,68 @@ public class WQSDevoreWesleyWilkersonSmith {
         return item.getPrice() + calculateSalexTax(item); // Item Price * Sales Tax
     }
 
+    public void sellItem(Scanner scanner){
+        System.out.println("which category would you like to sell from\n" +
+                "Press 1 for Clothing Item\n" +
+                "Press 2 for Electronic Item\n" +
+                "Press 3 for Food Item\n");
+
+        int category = scanner.nextInt();
+
+        StoreItem[] inventory;
+        int itemCount;
+
+        switch (category) {
+            case 1:
+                inventory = clothingItemInventory;
+                itemCount = clothingItemInventoryCount;
+                break;
+            case 2:
+                inventory = electricItemInventory;
+                itemCount = electricInventoryCount;
+                break;
+            case 3:
+                inventory = foodItemInventory;
+                itemCount = foodItemInventoryCount;
+                break;  //
+            default:
+                System.out.println("Invalid Category.");
+                return;
+        }
+
+        displayItems(inventory, itemCount);
+
+        System.out.print("Enter the name of the item you want to sell: ");
+        scanner.nextLine(); // consume leftover newline
+        String name = scanner.nextLine();
+
+        StoreItem item = getStoreItem(inventory, itemCount, name);
+        if (item == null) {
+            System.out.println("Item not found in inventory.");
+            return;
+        }
+
+        System.out.print("Enter quantity to sell: ");
+        int quantityToSell = scanner.nextInt();
+
+        if (quantityToSell > item.getQuantity()) {
+            System.out.println("Not enough stock. Available: " + item.getQuantity());
+            return;
+        }
+
+        item.setQuantity(item.getQuantity() - quantityToSell);
+
+        double totalPrice = calculatePrice(item) * quantityToSell;
+
+        System.out.printf("Sold %d x %s%n", quantityToSell, item.getName());
+        System.out.printf("Price per item (with tax): $%.2f%n", calculatePrice(item));
+        System.out.printf("Total: $%.2f%n", totalPrice);
+
+        if (item.getQuantity() == 0) {
+            System.out.println("Warning: " + item.getName() + " is now out of stock.");
+        }
+    }
+
     /**
      * Adds a item to the store inventory
      * @param scanner
