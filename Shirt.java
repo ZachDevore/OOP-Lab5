@@ -37,7 +37,7 @@ public class Shirt extends ClothingItem{
 
     @Override
     public String toString(){
-        return String.format("ItemID: %d    |    Name: %s    |    Price: %.2f    |    Quantity: %d    |    Brand: %s    |    Size: %s    |    Color: %s    |    Sleeve Type: %s    |    Material: %s",
+        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: %.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tSize: %s\t|\tColor: %s\t|\tSleeve Type:  %b\t|\tCategory: %s|",
                             getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getSize(), getColor(), getSleeve_type(), getMaterial());
 
         // return "ItemId" + this.getItemID() +

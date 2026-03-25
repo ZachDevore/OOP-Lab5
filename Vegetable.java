@@ -115,7 +115,7 @@ public class Vegetable extends FoodItem {
 
     @Override
     public String toString() {
-         return String.format("ItemID: %d|\tName: %s|\tPrice: %.2f|\tQuantity: %d|\tCalories: %d|\tExpiration Date: %.0f|\tColor: %s|\tHas Seeds? %b|\tIs Root? %b|\tIs Flower? %b|\tIs Leaf? %b|\tIs Stem? %b", 
+         return String.format("ItemID: %d| Name: %s| Price: %.2f| Quantity: %d| Calories: %d| Expiration Date: %.0f| Color: %s| Has Seeds? %b| Is Root? %b| Is Flower? %b| Is Leaf? %b| Is Stem? %b", 
                             getItemID(), getName(), getPrice(), getQuantity(), getCalories(), getExpirationDate(), getColor(), getHasSeeds(), getIsRoot(), getIsFlower(), getIsLeaf(), getIsStem());
         // return "ItemId: " + this.getItemID() +
         //         "\nPrice: " + this.getPrice() +

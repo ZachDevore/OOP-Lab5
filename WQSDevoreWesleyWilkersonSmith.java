@@ -104,12 +104,13 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public void displayItems(StoreItem[] items, int itemCount) {
             // Hard coding a few instances in the main method so no need to check if the array is empty
-            System.out.println("----------------------------------------");
+            System.out.println("-------------------------------------------------------------------------");
             
             for (int i = 0; i < itemCount; i++) {
                 System.out.println(items[i]);
                 System.out.println();
             }
+           System.out.println("-------------------------------------------------------------------------");
         }
     
     /**

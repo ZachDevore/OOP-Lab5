@@ -56,7 +56,7 @@ public class Laptop extends ElectronicItem {
      */
     @Override
     public String toString() {
-        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: $%.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tWarrenty Months: %d\t|\tPower Consumption in Watts: %.2f\t|\tIs Rechargeable? %b\t|\tScreen Size: %.2f\t|\tRAM: %d", 
+        return String.format("ItemID: %d| Name: %s| Price: $%.2f| Quantity: %d| Brand: %s| Warrenty Months: %d| Power Consumption in Watts: %.2f| Is Rechargeable? %b| Screen Size: %.2f| RAM: %d", 
                             getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getWarrantyMonths(), getPowerWatts(), getIsRechargable(), getScreenSize(), getRam());
         // return "ItemId: " + this.getItemID() + 
         //         "\nPrice: " + this.getPrice() + 

@@ -54,7 +54,7 @@ public class Phone extends ElectronicItem {
      */
     @Override
     public String toString() {
-         return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: $%.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tWarrenty Months: %d\t|\tPower Consumption in Watts: %.2f\t|\tIs Rechargeable? %b\t|\tOperating System: %s\t|\tCharger Port: %s", 
+         return String.format("ItemID: %d| Name: %s| Price: $%.2f| Quantity: %d| Brand: %s| Warrenty Months: %d| Power Consumption in Watts: %.2f| Is Rechargeable? %b| Operating System: %s| Charger Port: %s", 
                             getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getWarrantyMonths(), getPowerWatts(), getIsRechargable(), getOs(), getChargerPort());
         // return "ItemId: " + this.getItemID() + 
         //         "\nPrice: " + this.getPrice() + 

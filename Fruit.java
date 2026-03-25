@@ -98,7 +98,7 @@ public class Fruit extends FoodItem {
 
     @Override
     public String toString() {
-        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: %.2f\t|\tQuantity: %d\t|\tCalories: %d\t|\tExpiration Date: %f\t|\tColor: %s\t|\tHas Seeds? %b\t|\tHas Peel? %b\t|\tIs Sweet?  %b\t|\tShape: %s", 
+        return String.format("ItemID: %d| Name: %s| Price: %.2f| Quantity: %d| Calories: %d| Expiration Date: %f| Color: %s|vHas Seeds? %b| Has Peel? %b| Is Sweet?  %b| Shape: %s", 
                             getItemID(), getName(), getPrice(), getQuantity(), getCalories(), getExpirationDate(), getColor(), getHasSeeds(), getHasPeel(), getIsSweet(), getShape());
         // return "ItemId: " + this.getItemID() +
         //         "\nPrice: " + this.getPrice() +
