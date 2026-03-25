@@ -17,10 +17,10 @@ public class Laptop extends ElectronicItem {
      * Constructor for a Macbook
      */
     public Laptop(int itemID, String name, double price, int quantity,
-                  String brand, int warrentyMonths, double powerWatts, boolean isRechargeable,
+                  String brand, int warrantyMonths, double powerWatts, boolean isRechargeable,
                   double screenSize, int ram) {
 
-            super(itemID, name, price, quantity, brand, warrentyMonths, powerWatts, isRechargeable); // Calling constructor from ElectronicItem
+            super(itemID, name, price, quantity, brand, warrantyMonths, powerWatts, isRechargeable); // Calling constructor from ElectronicItem
 
             this.screenSize = screenSize;
             this.ram = ram;
@@ -56,15 +56,17 @@ public class Laptop extends ElectronicItem {
      */
     @Override
     public String toString() {
-        return "ItemId: " + this.getItemID() + 
-                "\nPrice: " + this.getPrice() + 
-                "\nQuantity: " + this.getQuantity() +
-                "\nBrand: " + this.getBrand() + 
-                "\nWarrenty Months: " + this.getWarrentyMonths() + 
-                "\nPower Watts: " + this.getPowerWatts() + 
-                "\nisRechargable: " + this.getIsRechargable() + 
-                "\nScreen Size: " + this.getScreenSize() + 
-                "\nRam: " + this.getRam();
+        return String.format("ItemID: %d| Name: %s| Price: $%.2f| Quantity: %d| Brand: %s| Warrenty Months: %d| Power Consumption in Watts: %.2f| Is Rechargeable? %b| Screen Size: %.2f| RAM: %d", 
+                            getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getWarrantyMonths(), getPowerWatts(), getIsRechargable(), getScreenSize(), getRam());
+        // return "ItemId: " + this.getItemID() + 
+        //         "\nPrice: " + this.getPrice() + 
+        //         "\nQuantity: " + this.getQuantity() +
+        //         "\nBrand: " + this.getBrand() + 
+        //         "\nWarrenty Months: " + this.getWarrentyMonths() + 
+        //         "\nPower Watts: " + this.getPowerWatts() + 
+        //         "\nisRechargable: " + this.getIsRechargable() + 
+        //         "\nScreen Size: " + this.getScreenSize() + 
+        //         "\nRam: " + this.getRam();
     }
     
 }

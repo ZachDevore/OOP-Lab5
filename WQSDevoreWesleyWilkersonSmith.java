@@ -72,7 +72,7 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public StoreItem getStoreItem(StoreItem[] items, int itemCount, String name) {
         for (int i = 0; i < itemCount; i++) {
-            if (items[i].getName().equals(name)) { // If item passed equals named pass it's a match
+            if (items[i].getName().equals(name)) { // If item passed equals name pass it's a match
                 return items[i];
             }
         }
@@ -104,9 +104,13 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public void displayItems(StoreItem[] items, int itemCount) {
             // Hard coding a few instances in the main method so no need to check if the array is empty
+            System.out.println("-------------------------------------------------------------------------");
+            
             for (int i = 0; i < itemCount; i++) {
-                System.out.println(items[i] + "\n");
+                System.out.println(items[i]);
+                System.out.println();
             }
+           System.out.println("-------------------------------------------------------------------------");
         }
     
     /**
@@ -116,7 +120,7 @@ public class WQSDevoreWesleyWilkersonSmith {
      */
     public double calculateSalexTax(StoreItem item) {
         if (item instanceof FoodItem) {
-            return item.getPrice() + .03; // 3% sales tax for food
+            return item.getPrice() * .03; // 3% sales tax for food
         } else {
             return item.getPrice() * .07; // 7% sales tax for all other items
         }

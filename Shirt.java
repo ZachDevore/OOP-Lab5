@@ -27,9 +27,9 @@ public class Shirt extends ClothingItem{
         this.material = material;
     }
 
-    public String getMaterial() {return material;}
+    public String getMaterial() {return this.material;}
 
-    public String getSleeve_type() {return sleeve_type;}
+    public String getSleeve_type() {return this.sleeve_type;}
 
     public void setMaterial(String material) {this.material = material;}
 
@@ -37,14 +37,17 @@ public class Shirt extends ClothingItem{
 
     @Override
     public String toString(){
-        return "ItemId" + this.getItemID() +
-                "\nPrice" + this.getPrice() +
-                "\nQuantity" + this.getQuantity() +
-                "\nBrand" + this.getBrand() +
-                "\nColor" + this.getColor() +
-                "\nSize" + this.getSize() +
-                "\nSleeve Type" + this.getSleeve_type() +
-                "\n Material" + this.getMaterial();
+        return String.format("ItemID: %d\t|\tName: %s\t|\tPrice: %.2f\t|\tQuantity: %d\t|\tBrand: %s\t|\tSize: %s\t|\tColor: %s\t|\tSleeve Type:  %b\t|\tCategory: %s|",
+                            getItemID(), getName(), getPrice(), getQuantity(), getBrand(), getSize(), getColor(), getSleeve_type(), getMaterial());
+
+        // return "ItemId" + this.getItemID() +
+        //         "\nPrice" + this.getPrice() +
+        //         "\nQuantity" + this.getQuantity() +
+        //         "\nBrand" + this.getBrand() +
+        //         "\nColor" + this.getColor() +
+        //         "\nSize" + this.getSize() +
+        //         "\nSleeve Type" + this.getSleeve_type() +
+        //         "\n Material" + this.getMaterial();
     }
 
 

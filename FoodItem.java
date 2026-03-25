@@ -10,7 +10,7 @@ public class FoodItem extends StoreItem {
     private int calories;
 
     //expiration date of item in format YYYYMMDD
-    private int expirationDate;
+    private double expirationDate;
 
     //determine if the food item has seeds (vegetable vs fruit)
     private boolean hasSeeds;
@@ -28,7 +28,7 @@ public class FoodItem extends StoreItem {
      * @param hasSeeds
      */
     public FoodItem(int itemID, String name, double price, int quantity, int calories,
-                    int expirationDate, String color, boolean hasSeeds) {
+                    double expirationDate, String color, boolean hasSeeds) {
 
         //call constructor of StoreItem
         super(itemID, name, price, quantity);
@@ -51,7 +51,7 @@ public class FoodItem extends StoreItem {
      * Return expiration date attribute
      * @return expirationDate
      */
-    public int getExpirationDate() {return this.expirationDate;}
+    public double getExpirationDate() {return this.expirationDate;}
 
     /**
      * Return if the item has seeds or not

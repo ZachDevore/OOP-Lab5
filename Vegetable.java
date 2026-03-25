@@ -115,16 +115,18 @@ public class Vegetable extends FoodItem {
 
     @Override
     public String toString() {
-        return "ItemId: " + this.getItemID() +
-                "\nPrice: " + this.getPrice() +
-                "\nQuantity: " + this.getQuantity() +
-                "\nCalories: " + this.getCalories() +
-                "\nExpiration Date: " + this.getExpirationDate() +
-                "\nColor: " + this.getColor() +
-                "\nHas Seeds: " + this.getHasSeeds() +
-                "\nIs Root: " + this.getIsRoot() +
-                "\nIs Flower: " + this.getIsFlower() +
-                "\nIs Leaf: " + this.getIsLeaf() +
-                "\nIs Stem: " + this.getIsStem();
+         return String.format("ItemID: %d| Name: %s| Price: %.2f| Quantity: %d| Calories: %d| Expiration Date: %.0f| Color: %s| Has Seeds? %b| Is Root? %b| Is Flower? %b| Is Leaf? %b| Is Stem? %b", 
+                            getItemID(), getName(), getPrice(), getQuantity(), getCalories(), getExpirationDate(), getColor(), getHasSeeds(), getIsRoot(), getIsFlower(), getIsLeaf(), getIsStem());
+        // return "ItemId: " + this.getItemID() +
+        //         "\nPrice: " + this.getPrice() +
+        //         "\nQuantity: " + this.getQuantity() +
+        //         "\nCalories: " + this.getCalories() +
+        //         "\nExpiration Date: " + this.getExpirationDate() +
+        //         "\nColor: " + this.getColor() +
+        //         "\nHas Seeds: " + this.getHasSeeds() +
+        //         "\nIs Root: " + this.getIsRoot() +
+        //         "\nIs Flower: " + this.getIsFlower() +
+        //         "\nIs Leaf: " + this.getIsLeaf() +
+        //         "\nIs Stem: " + this.getIsStem();
     }
 }
