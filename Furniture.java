@@ -58,39 +58,110 @@ public class Furniture extends HouseholdItem {
         this.width = width;
     }
 
-    public String getTypeOfFurniture(){ return typeOfFurniture; }
-    public boolean getModular(){ return modular; }
-    public boolean getSoldInSet(){ return soldInSet; }
-    public int getAmountOfFeet(){ return amountOfFeet; }
-    public int getAmountOfPeopleCanHold(){ return amountOfPeopleCanHold; }
-    public double getLength(){ return length; }
-    public double getWidth(){ return width; }
+    /**
+     * Getter for typeOfFurtniture
+     * @return type of furtniture
+     */
+    public String getTypeOfFurniture(){ return this.typeOfFurniture; }
 
+    /**
+     * Getter for modular
+     * @return whether it is modular or not
+     */
+    public boolean getModular(){ return this.modular; }
+
+    /**
+     * Getter for soldInSet
+     * @return whether it is sold in a set or not
+     */
+    public boolean getSoldInSet(){ return this.soldInSet; }
+
+    /**
+     * Getter for amountOfFeet
+     * @return the number of feet on the furniture
+     */
+    public int getAmountOfFeet(){ return this.amountOfFeet; }
+
+    /**
+     * Getter for AmountOfPeopleCanHold
+     * @return the number of people the furniture can hold
+     */
+    public int getAmountOfPeopleCanHold(){ return this.amountOfPeopleCanHold; }
+
+    /**
+     * Getter for length
+     * @return The length of the furniture
+     */
+    public double getLength(){ return this.length; }
+
+    /**
+     * Getter for width
+     * @return The width of the furtniture
+     */
+    public double getWidth(){ return this.width; }
+
+    /**
+     * Setter for typeOfFurniture
+     * @param typeOfFurniture
+     */
     public void setTypeOfFurniture(String typeOfFurniture){
         this.typeOfFurniture = typeOfFurniture;
     }
 
+    /**
+     * Setter for modular
+     * @param modular
+     */
     public void setModular(boolean modular){
         this.modular = modular;
     }
 
+    /**
+     * Setter for soldInSet
+     * @param soldInSet
+     */
     public void setSoldInSet(boolean soldInSet){
         this.soldInSet = soldInSet;
     }
 
+    /**
+     * Setter for amountOfFeet
+     * @param amountOfFeet
+     */
     public void setAmountOfFeet(int amountOfFeet){
         this.amountOfFeet = amountOfFeet;
     }
 
+    /**
+     * Setter for amountOfPeopleCanHold
+     * @param amountOfPeopleCanHold
+     */
     public void setAmountOfPeopleCanHold(int amountOfPeopleCanHold){
         this.amountOfPeopleCanHold = amountOfPeopleCanHold;
     }
 
+    /**
+     * Setter for length
+     * @param length
+     */
     public void setLength(double length){
         this.length = length;
     }
 
+    /**
+     * Setter for width
+     * @param width
+     */
     public void setWidth(double width){
         this.width = width;
+    }
+
+    /**
+     * Creates a string representation of a furniture object with all attributes
+     */
+    @Override
+    public String toString() {
+        return String.format("ItemID: %d| Name: %s| Price: $%.2f| Quantity: %d| Weight: %.2f| Material: %s| Area Of Use: %s| Type of Furniture: %s| Is it Modular? %b| Is it sold in a set? %b| Number of feet: %d| Amount of people it can hold: %d| Length: %d| Width: %d", 
+                        getItemID(), getName(), getPrice(), getQuantity(), getWeight(), getMaterial(), getAreaOfUse(), getTypeOfFurniture(), getModular(), getSoldInSet(), getAmountOfFeet(), getAmountOfPeopleCanHold(), getLength(), getWidth());
     }
 }
