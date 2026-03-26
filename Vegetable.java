@@ -6,16 +6,16 @@
 
 public class Vegetable extends FoodItem {
 
-    // Is the vegetable a root?
+    /** Is the Vehetable a root? */
     private boolean isRoot;
 
-    // Is the vegetable a flower?
+    /**  Is the vegetable a flower? */
     private boolean isFlower;
 
-    // Is the vegetable a leaf?
+    /**  Is the vegetable a leaf? */
     private boolean isLeaf;
 
-    // Is the vegetable a stem?
+    /**  Is the vegetable a stem? */
     private boolean isStem;
 
 //Constructor
@@ -51,25 +51,25 @@ public class Vegetable extends FoodItem {
      * Accessor for isRoot
      * @return isRoot
      */
-    public boolean getIsRoot(){return isRoot;}
+    public boolean getIsRoot(){return this.isRoot;}
 
     /**
      * Accessor for isFlower
      * @return isFlower
      */
-    public boolean getIsFlower(){return isFlower;}
+    public boolean getIsFlower(){return this.isFlower;}
 
     /**
      * Accessor for isLeaf
      * @return isLeaf
      */
-    public boolean getIsLeaf(){return isLeaf;}
+    public boolean getIsLeaf(){return this.isLeaf;}
 
     /**
      * Accessor for isStem
      * @return isStem
      */
-    public boolean getIsStem(){return isStem;}
+    public boolean getIsStem(){return this.isStem;}
 
 
 //Mutators

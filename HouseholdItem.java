@@ -33,20 +33,29 @@ public class HouseholdItem extends StoreItem {
     }
 
     /** @return the weight of the item */
-    public double getWeight() { return weight; }
+    public double getWeight() { return this.weight; }
 
     /** @return the material of the item */
-    public String getMaterial() { return material; }
+    public String getMaterial() { return this.material; }
 
     /** @return the area where the item is used */
-    public String getAreaOfUse() { return areaOfUse; }
+    public String getAreaOfUse() { return this.areaOfUse; }
 
-    /** Sets the weight of the item */
+    /**
+     * Setter for Weight
+     * @param weight
+     */
     public void setWeight(double weight) { this.weight = weight; }
 
-    /** Sets the material of the item */
+    /**
+     * Setter for Material
+     * @param material
+     */
     public void setMaterial(String material) { this.material = material; }
 
-    /** Sets the area of use for the item */
+    /**
+     * Setter for areaOfUSe
+     * @param areaOfUse
+     */
     public void setAreaOfUse(String areaOfUse) { this.areaOfUse = areaOfUse; }
 }

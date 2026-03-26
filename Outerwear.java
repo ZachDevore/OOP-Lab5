@@ -1,5 +1,8 @@
 public class Outerwear extends ClothingItem{
+    /** Whether a piece of clothing is water proof or not */
     private boolean isWaterproof;
+
+    /** Whether a piece of clothing is reversable or not */
     private boolean isReversible;
 
 
@@ -25,21 +28,29 @@ public class Outerwear extends ClothingItem{
     }
 
     /**
-     *
+     *Getter for isWaterProof
      * @return isWaterproof
      */
-    public boolean getIsWaterproof(){ return isWaterproof;}
+    public boolean getIsWaterproof(){ return this.isWaterproof;}
 
-    public boolean getIsReversible() {return isReversible;}
+    /**
+     * Getter for isReversable
+     * @return
+     */
+    public boolean getIsReversible() {return this.isReversible;}
+
+    /**
+     * Setter for isWaterProof
+     * @param isWaterProof
+     */
+    public void setIsWaterProof(boolean isWaterProof) {this.isWaterproof = isWaterProof;}
+
+    /**
+     * Setter for isReversable
+     * @param isReversable
+     */
+    public void setIsReversable(boolean isReversable) {this.isReversible = isReversable;}
 
 
-    @Override
-    public String toString(){
-        return "Item Id" + this.getItemID() +
-                "\nPrice" + this.getPrice() +
-                "\nQuantity" + this.getQuantity() +
-                "\nBrand" + this.getBrand() +
-                "\nSize" + this.getSize() +
-                "\nColor" + this.getColor();
-    }
+
 }
