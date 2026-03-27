@@ -430,6 +430,7 @@ public class WQSDevoreWesleyWilkersonSmith {
         " Press 1 for Clothing Item\n" +
         " Press 2 for Electronic Item\n" +
         " Press 3 for Food Item\n" +
+        " Press 4 for Household Item\n " +
         " Press 0 to stop adding items\n");
 
         int userChoice;
