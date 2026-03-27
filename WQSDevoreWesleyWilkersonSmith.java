@@ -116,7 +116,7 @@ public class WQSDevoreWesleyWilkersonSmith {
         // Add clothing items
         clothingItemInventory[clothingItemInventoryCount++] = new Shirt(1, "Executive", 25.99, 2, "polo", "medium", "black", "short", "cotten");
         clothingItemInventory[clothingItemInventoryCount++] = new Shoe(2, "AirMax", "NIke", "black", 150, 10, "10 1/2", "BasketBall", false, "lace");
-
+        clothingItemInventory[clothingItemInventoryCount++] = new Outerwear(3, "RainJacket", 10, 89.99, "Columbia", "Large", "Navy", true, true);
         // Add electric items
         electricItemInventory[electricInventoryCount++] = new Phone(3, "Iphone", 1000, 100, "Apple", 24, 50, true, "IOS", "USB-C");
         electricItemInventory[electricInventoryCount++] = new Laptop(4, "Macbook", 2500, 50, "Apple", 24, 100, true, 14, 32);
@@ -451,7 +451,7 @@ public class WQSDevoreWesleyWilkersonSmith {
                         } else {
 
                         
-                        System.out.println("Which kind of Clothing Item would you like to add?\nPress 1 for Shoe, Press 2 for Shirt");
+                        System.out.println("Which kind of Clothing Item would you like to add?\nPress 1 for Shoe, Press 2 for Shirt\nPress 3 for Outerwear:");
                         int typeOfClothingItem = scanner.nextInt();
                         scanner.nextLine(); //
 
