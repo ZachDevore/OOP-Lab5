@@ -552,6 +552,7 @@ public class WQSDevoreWesleyWilkersonSmith {
 
                                 System.out.println("(String) Enter the Name: ");
                                 String name = scanner.nextLine();
+                                scanner.nextLine();
 
                                 System.out.println("(double) Enter the price $");
                                 double price = scanner.nextDouble();
